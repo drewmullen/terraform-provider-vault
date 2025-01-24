@@ -85,15 +85,13 @@ func (p *VaultProvider) Configure(ctx context.Context, req provider.ConfigureReq
 func (p *VaultProvider) Resources(ctx context.Context) []func() resource.Resource {
 	return []func() resource.Resource{
 		// Register your resources here
-		NewExampleResource,
 	}
 }
 
 func (p *VaultProvider) DataSources(ctx context.Context) []func() datasource.DataSource {
 	return []func() datasource.DataSource{
 		// Register your data sources here
-		NewExampleDataSource,
-		NewKVSecret2DataSource,
+		NewKVSecretDataSource,
 	}
 }
 
